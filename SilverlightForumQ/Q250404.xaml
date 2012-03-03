@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SilverlightForumQ.Q250404"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" 
+    xmlns:clr="clr-namespace:System;assembly=mscorlib"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+	<UserControl.Resources>
+		<DataTemplate x:Key="AddBehaviorsTemplate">
+			<Grid>
+				<Image Margin="0,0,0,0" HorizontalAlignment="Right" Source="/SilverlightForumQ;component/Images/acme.png" />
+				<TextBlock Text="{Binding}" FontSize="20" />
+			</Grid>
+		</DataTemplate>
+	</UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <sdk:Label Name="label1" Content="http://forums.silverlight.net/t/250404.aspx" Height="34" VerticalAlignment="Top" />
+        <ListBox Height="240" HorizontalAlignment="Left" 
+                 Margin="12,40,0,0" Name="listBox1" VerticalAlignment="Top" Width="376" ItemTemplate="{StaticResource AddBehaviorsTemplate}">
+            <clr:String>Sunday</clr:String>
+            <clr:String>Monday</clr:String>
+            <clr:String>Tuesday</clr:String>
+            <clr:String>Wednesday</clr:String>
+        </ListBox>
+    </Grid>
+</UserControl>
